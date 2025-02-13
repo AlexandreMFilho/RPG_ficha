@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('valquirias', function (Blueprint $table) {
             $table->id(); // ID único da valquiria
             $table->foreignId('criatura_id')->constrained('criaturas')->onDelete('cascade'); // Relacionamento com a tabela 'criaturas'
+            $table->foreingId('id_user')->constrained('users')->onDelete('cascade'); // Relacionamento com a tabela 'users'
+            $table->string('nome');
             $table->string('raca')->default('valquiria');
             $table->string('classe');
             $table->string('armadura');

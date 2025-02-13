@@ -9,7 +9,11 @@ class Monstro extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['criatura_id', 'atributos', 'habilidades'];
+    protected $fillable = [
+        'criatura_id',
+        'atributos',
+        'habilidades',
+    ];
 
     protected $casts = [
         'atributos' => 'json',

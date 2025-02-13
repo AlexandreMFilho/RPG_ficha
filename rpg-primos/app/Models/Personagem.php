@@ -10,10 +10,29 @@ class Personagem extends Model
     use HasFactory;
 
     protected $fillable = [
-        'criatura_id', 'nome', 'classe', 'raca', 'tendencia', 'nivel', 'deslocamento',
-        'bonus_base', 'altura', 'peso', 'idade', 'sexo', 'atributos', 'ca',
-        'pv', 'iniciativa', 'habilidades_campo', 'habilidades', 'berloque',
-        'corpo', 'maos', 'anotacoes', 'itens'
+        'criatura_id',
+        'nome',
+        'classe',
+        'raca',
+        'tendencia',
+        'nivel',
+        'deslocamento',
+        'bonus_base',
+        'altura',
+        'peso',
+        'idade',
+        'sexo',
+        'atributos',
+        'ca',
+        'pv',
+        'iniciativa',
+        'habilidades_campo',
+        'habilidades',
+        'berloque',
+        'corpo',
+        'maos',
+        'anotacoes',
+        'itens'
     ];
 
     protected $casts = [
