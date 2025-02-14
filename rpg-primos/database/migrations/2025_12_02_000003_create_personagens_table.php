@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('personagens', function (Blueprint $table) {
             $table->id(); // ID único da valquiria
             $table->foreignId('criatura_id')->constrained('criaturas')->onDelete('cascade'); // Relacionamento com a tabela 'criaturas'
-            $table->string('raca');
+            $table->string('raca')->default('personagem');
             $table->string('classe');
             $table->string('armadura');
             $table->string('arma_1');
@@ -26,7 +26,6 @@ return new class extends Migration
             $table->text('tesouros_de_odin');
             $table->text('historia');
             $table->text('observacoes');
-            $table->json('personagens'); // Podem ser personagens relacionados
             $table->integer('mana');
             $table->text('itens');
             $table->timestamp('last_used_at')->nullable();

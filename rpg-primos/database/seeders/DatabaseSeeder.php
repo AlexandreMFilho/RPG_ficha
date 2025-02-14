@@ -21,10 +21,10 @@ class DatabaseSeeder extends Seeder
         User::factory(3)->create(['perfil' => 'jogador']);
 
         // Criando 7 Valquírias
-        Valquiria::factory(7)->create();
+        Valquiria::factory(2)->create();
 
         // Criando 20 Personagens
-        Personagem::factory(10)->create();
+        // Personagem::factory(10)->create();
 
         // Criando 50 Monstros
         Monstro::factory(10)->create();

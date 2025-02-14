@@ -44,7 +44,7 @@ Route::get('/', function () {
     return view('/login/login');
 });
 Route::get('/ficha/{id}', function () {
-    return view('/ficha/');
+    return view('/fichas/index');
 });
 Route::get('/welcome', function () {
     return view('/welcome');
