@@ -2,21 +2,31 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Criatura;
+use App\Models\Valquiria;
+use App\Models\Personagem;
+use App\Models\Monstro;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        
+        // Criando 1 Mestre
+        User::factory()->create(['perfil' => 'mestre']);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // Criando 3 Jogadores
+        User::factory(3)->create(['perfil' => 'jogador']);
+
+        // Criando 7 Valquírias
+        Valquiria::factory(7)->create();
+
+        // Criando 20 Personagens
+        Personagem::factory(10)->create();
+
+        // Criando 50 Monstros
+        Monstro::factory(10)->create();
     }
 }
