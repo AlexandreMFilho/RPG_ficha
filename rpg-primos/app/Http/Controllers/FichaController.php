@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Valquiria;
 
 class FichaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $valquiria = Valquiria::find(1);
+
+        return view('fichas.index', compact('valquiria'));
     }
 
     /**
