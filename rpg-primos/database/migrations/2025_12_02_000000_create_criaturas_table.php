@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('criaturas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('fichas_id')->constrained('fichas')->onDelete('cascade');
             $table->string('name');
             $table->enum('tipo', ['valquiria', 'personagem', 'monstro']);
             $table->timestamp('last_used_at')->nullable();

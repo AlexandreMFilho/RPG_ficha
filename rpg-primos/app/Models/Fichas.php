@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ficha extends Model
+class Fichas extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'criatura_id',
         // 'dados'
     ];
 
@@ -18,8 +17,5 @@ class Ficha extends Model
     //     'dados' => 'json',
     // ];
 
-    public function criatura()
-    {
-        return $this->belongsTo(Criatura::class);
-    }
+
 }

@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Valquiria;
 
-class FichaController extends Controller
+class FichasController extends Controller
 {
     public function index()
     {
-        $valquiria = Valquiria::find(1);
+        $ficha = Fichas::find(1);
 
-        return view('fichas.index', compact('valquiria'));
+        return view('fichas.index', compact('ficha'));
     }
 
     /**
