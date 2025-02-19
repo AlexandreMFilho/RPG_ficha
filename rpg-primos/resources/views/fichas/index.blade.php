@@ -26,7 +26,7 @@
                 <div style="
                     display:flex;flex-direction:column;
                     justify-content:center;align-items:center;
-                    /* border:1px solid gray; */
+                    border:1px solid gray;
                     height:280px;max-width:300px;
                     border-radius: 8px;
 
@@ -201,48 +201,65 @@
             <p class="lead">9 metros</p>
             
             
-        <!-- Equipamentos e Mochila -->
-        <div class="row mt-3">
-            <div class="col-md-4">
-                <h4>Equipamento</h4>
-                <ul class="list-group">
-                    
-                        <li class="list-group-item">Tocha</li>
+            <!-- Equipamentos e Mochila -->
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <h4>Equipamento</h4>
+                    <ul class="list-group">
+                        
+                            <li class="list-group-item">Tocha</li>
+                        </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Mochila</h4>
+                    <ul class="list-group">
+                            <li class="list-group-item"> item</li>
                     </ul>
-            </div>
-            <div class="col-md-4">
-                <h4>Mochila</h4>
-                <ul class="list-group">
-                        <li class="list-group-item"> item</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4>Itens</h4>
-                <ul class="list-group">
-                    <li class="list-group-item">item</li>
-                </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Itens</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">item</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
         <!-- Personagens associados -->
+        <div style="display:flex;flex-direction:column;
+            justify-content:space-around;align-items:flex-start;
+            border:1px solid blue;
+            margin:10px;padding:10px;
+            ">
+            <div>
+                <h4>Heróis</h4>
+            </div>
+            <div id="carousel">
+                <a href="" class="item" >
+                    <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="
+                        border-radius: 100px;
+                    ">
+                </a>
+                <a href="" >
+                    <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="
+                        border-radius: 100px;
+                    ">
+                </a>
+                <a href="" >
+                    <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="
+                        border-radius: 100px;
+                    ">
+                </a>
+            </div>
+            
+            <!-- Robar Dados -->
+        </div>
         <div style="display:flex;flex-direction:row;
             /* justify-content:space-around;align-items:flex-start; */
             border:1px solid blue;
             margin:10px;padding:10px;
             ">
-            <h4>Personagens</h4>
-            <div >
-                    <a href="" class="btn btn-outline-primary mx-1">
-                        <img src="" alt="Personagem" class="img-thumbnail" width="50">
-                    </a>
-            </div>
-            
-            <!-- Robar Dados -->
-            <div>
-                <h4>Robar Dados</h4>
-                <p>PLOT</p>
-            </div>
+            <h4>Rolar Dados</h4>
         </div>
     </div>
 </div>
