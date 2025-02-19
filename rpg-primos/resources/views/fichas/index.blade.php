@@ -38,34 +38,79 @@
                         ">
                 </div>
               
-                <img src="{{ asset('imgs/mana_array_4.webp') }}" alt="Imagem da Valquíria" class="img-fluid" 
-                    style="width:275px;
+                <img src="{{ asset('imgs/plains.jpg') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                    style="width:40px;
                     border: 0px solid #ccc;
                     border-radius: 8px;
                     margin-left:2px;
                     position:relative;
-                    top:-80px;
+                    top:-60px;
                     ">
+                <img src="{{ asset('imgs/island.jpg') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                    style="width:40px;
+                    border: 0px solid #ccc;
+                    border-radius: 8px;
+                    margin-left:2px;
+                    position:relative;
+                    top:-60px;
+                    ">
+                <img src="{{ asset('imgs/swamp.jpg') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                    style="width:40px;
+                    border: 0px solid #ccc;
+                    border-radius: 8px;
+                    margin-left:2px;
+                    position:relative;
+                    top:-60px;
+                    ">
+                <img src="{{ asset('imgs/montain.jpg') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                    style="width:40px;
+                    border: 0px solid #ccc;
+                    border-radius: 8px;
+                    margin-left:2px;
+                    position:relative;
+                    top:-60px;
+                    ">
+                <img src="{{ asset('imgs/forest.jpg') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                    style="width:40px;
+                    border: 0px solid #ccc;
+                    border-radius: 8px;
+                    margin-left:2px;
+                    position:relative;
+                    top:-60px;
+                    ">
+                <img src="{{ asset('imgs/colorless.jpg') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                    style="width:40px;
+                    border: 0px solid #ccc;
+                    border-radius: 8px;
+                    margin-left:2px;
+                    position:relative;
+                    top:-60px;
+                    ">
+                
                 <div style="
                     display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-around;
                     justify-content:space-around;
                     position:relative;
                     top:-105px;
+                    right:2px;
                     ">
                     <!-- Mana branca -->
-                    <span>1</span>
+                    <span><strong style="font-size:25px; color:white; text-shadow: 0 0 0.2em #000, 0 0 0.2em #FFF">1</strong></span>
 
                     <!-- Mana azul -->                    
-                    <span>1</span>
+                    <span><strong style="font-size:25px; color:white; text-shadow: 0 0 0.2em #000, 0 0 0.2em blue">1</strong></span>
 
                     <!-- Mana preta -->
-                    <span>1</span>
+                    <span><strong style="font-size:25px; color:white; text-shadow: 0 0 0.2em #000, 0 0 0.2em #000">1</strong></span>
 
                     <!-- Mana vermelha -->
-                    <span>1</span>
+                    <span><strong style="font-size:25px; color:white; text-shadow: 0 0 0.2em #000, 0 0 0.2em red">1</strong></span>
 
                     <!-- Mana verde -->
-                    <span>1</span>
+                    <span><strong style="font-size:25px; color:white; text-shadow: 0 0 0.2em #000, 0 0 0.2em green">1</strong></span>
+
+                    <!-- Mana sem cor -->
+                    <span><strong style="font-size:25px; color:white; text-shadow: 0 0 0.2em #000, 0 0 0.2em #fff">1</strong></span>
                     
                 </div>
             </div>
@@ -102,9 +147,8 @@
                             <td style="vertical-align: middle;"><strong>Vigor:</strong> 1</td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="text-align: center; vertical-align: middle;">
-                                <strong>Raciocínio:</strong> 1
-                            </td>
+                            <td style="vertical-align: middle;"><strong>Raciocínio:</strong> 1</td>
+                            <td style="vertical-align: middle;"><strong>Sabedoria:</strong> 1</td>
                         </tr>
                     </table>
                 </div>
@@ -132,7 +176,7 @@
                             <li style="vertical-align: middle;"><strong>Verde:</strong> 1</li>
                             <li style="vertical-align: middle;"><strong>Azul:</strong> 1</li>
                         </ul> -->
-                        <img src="{{ asset('imgs/mana_circle_5.png') }}" alt="Imagem da Valquíria" class="img-fluid"
+                        <img src="{{ asset('imgs/mana_circle_5.png') }}" alt="Quantidade de Manas" class="img-fluid"
                             style="
                             /* width: 275px; */
                             border: 0px solid #ccc;
@@ -140,6 +184,7 @@
                             position:relative;
                             margin-top:-50px;
                             ">
+                            
                     </div>
                 </div>
 
