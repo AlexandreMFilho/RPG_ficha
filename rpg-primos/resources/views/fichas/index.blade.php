@@ -1,6 +1,61 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<style>
+    .slider-container {
+        width: 300px;
+        height: 140px;
+        margin: auto;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .slide {
+        flex-shrink: 0;
+    }
+
+    .slide img {
+        height: 130px;
+        border-radius: 50%;
+        width: 130px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .controls label {
+        width: 15px;
+        height: 15px;
+        background-color: gray;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .controls label:hover {
+        background-color: black;
+    }
+</style>
+
+
+
+
 <div class="container card" style="height:95%;border:1px solid black">
     <h2 class="text-center text-uppercase">Ficha 1</h2>
 
@@ -226,34 +281,62 @@
         </div>
 
         <!-- Personagens associados -->
-        <div style="display:flex;flex-direction:column;
+        <div style="display:flex;flex-direction:row;
             justify-content:space-around;align-items:flex-start;
             border:1px solid blue;
             margin:10px;padding:10px;
             ">
-            <div>
+            <div style="display:flex;flex-direction:column;
+                justify-content:space-around;align-items:flex-start;
+                border:1px solid blue;
+                margin:10px;padding:10px;
+                ">
+               <div style="border: 1px solid blue; margin: 10px; padding: 10px;">
                 <h4>Heróis</h4>
+                <div id="carousel">
+                    @foreach([1,2] as $item)
+                        <a href="" class="item">
+                            <img src="{{ asset('imgs/mulher_verde.jpg') }}" alt="Personagem" class="img-thumbnail" width="130" style="border-radius: 100px;">
+                        </a>
+                    @endforeach
+                </div>
             </div>
-            <div id="carousel">
-                <a href="" class="item" >
-                    <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="
-                        border-radius: 100px;
-                    ">
-                </a>
-                <a href="" >
-                    <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="
-                        border-radius: 100px;
-                    ">
-                </a>
-                <a href="" >
-                    <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="
-                        border-radius: 100px;
-                    ">
-                </a>
+
+            <div class="controls">
+                
             </div>
-            
-            <!-- Robar Dados -->
+
+            </div>
+            <div style="display:flex;flex-direction:column;
+                justify-content:space-around;align-items:flex-start;
+                border:1px solid blue;
+                margin:10px;padding:10px;
+                ">
+                <div>
+                    <h4>Heróis</h4>
+                </div>
+                <div id="carousel">
+                    <a href="" class="item" >
+                        <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="
+                            border-radius: 100px;
+                        ">
+                    </a>
+                    <a href="" >
+                        <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="
+                            border-radius: 100px;
+                        ">
+                    </a>
+                    <a href="" >
+                        <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="
+                            border-radius: 100px;
+                        ">
+                    </a>
+                </div>
+            </div>
         </div>
+
+
+        <!-- Robar Dados -->
         <div style="display:flex;flex-direction:row;
             /* justify-content:space-around;align-items:flex-start; */
             border:1px solid blue;
@@ -264,4 +347,12 @@
     </div>
 </div>
 
+
+<script>
+    document.querySelectorAll('input[name="slider"]').forEach((input, index) => {
+        input.addEventListener('change', () => {
+            document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
+        });
+    });
+</script>
 @endsection

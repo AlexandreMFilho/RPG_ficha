@@ -49,3 +49,5 @@ Route::get('/ficha/{id}', function () {
 Route::get('/welcome', function () {
     return view('/welcome');
 });
+
+Route::get('/ficha', [FichaController::class, 'show']);

@@ -11,7 +11,14 @@ class FichasController extends Controller
     {
         $ficha = Fichas::find(1);
 
-        return view('fichas.index', compact('ficha'));
+        $imagens = [
+            'imgs/mulher_verde.jpg',
+            'imgs/montain.jpg',
+            'imgs/forest.jpg',
+            'imgs/swamp.jpg'
+        ];
+        
+        return view('fichas.index', compact('ficha','imagens'));
     }
 
     /**
@@ -33,9 +40,14 @@ class FichasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        $imagens = [
+            'imgs/hero1.jpg',
+            'imgs/hero2.jpg',
+            'imgs/hero3.jpg',
+        ];
+        return view('sua-view', compact('imagens'));
     }
 
     /**
