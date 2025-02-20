@@ -51,3 +51,5 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/ficha', [FichaController::class, 'show']);
+
+Route::get('/teste', [FichaController::class, 'index']);

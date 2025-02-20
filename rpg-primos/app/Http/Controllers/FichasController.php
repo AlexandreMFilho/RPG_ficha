@@ -12,11 +12,17 @@ class FichasController extends Controller
         $ficha = Fichas::find(1);
 
         $imagens = [
-            'imgs/mulher_verde.jpg',
-            'imgs/montain.jpg',
-            'imgs/forest.jpg',
-            'imgs/swamp.jpg'
+            asset('imgs/mulher_verde.jpg'),
+            asset('imgs/max.jpg'),
+            asset('imgs/mana_circle_1.jpg'),
+            asset('imgs/mana_circle_3.jpg'),
+            asset('imgs/pena_3.jpg'),
+            asset('imgs/colorless.jpg'),
+            asset('imgs/forest.jpg'),
+            asset('imgs/island.jpg'),
+            asset('imgs/mountain.jpg'),
         ];
+
         
         return view('fichas.index', compact('ficha','imagens'));
     }
