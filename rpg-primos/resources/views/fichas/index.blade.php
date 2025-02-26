@@ -176,13 +176,88 @@
                             <li style="vertical-align: middle;"><strong>Verde:</strong> 1</li>
                             <li style="vertical-align: middle;"><strong>Azul:</strong> 1</li>
                         </ul> -->
-                        <img src="{{ asset('imgs/mana_circle_5.png') }}" alt="Quantidade de Manas" class="img-fluid"
-                            style="
-                            /* width: 275px; */
+
+                        <div>
+                        <canvas style ="width: 240px; positon:relative; padding-bottom:15px" id="myChart"></canvas>
+                        </div>
+
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                        <script>
+                        const ctx = document.getElementById('myChart');
+
+                        new Chart(ctx, {
+                            type: 'radar',
+                            data: {
+                            labels: ['', '', '', '', ''],
+                            datasets: [{
+                                backgroundColor: 'rgba(0, 0, 255, 0.8)',
+                                label: '',
+                                data: [10, 100, 10, 10, 10],
+                                borderWidth: 3
+                            }]
+                            },
+                            options: {
+                                plugins: {
+                                    legend: {
+                                        display: false
+                                    }
+                                }
+                            }
+                        });
+                        </script>
+
+                        <img src="{{ asset('imgs/Branca.png') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                            style="width:40px;
                             border: 0px solid #ccc;
                             border-radius: 8px;
+                            margin-left:-140px;
+                            margin-top:-80px;
                             position:relative;
-                            margin-top:-50px;
+                            top:-60px;
+                            ">
+
+                        <img src="{{ asset('imgs/Azul.png') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                            style="width:40px;
+                            border: 0px solid #ccc;
+                            border-radius: 8px;
+                            margin-left:50px;
+                            margin-top:60px;
+                            margin-left:60px;
+                            position:relative;
+                            top:-60px;
+                            ">
+
+                        <img src="{{ asset('imgs/Preta.png') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                            style="width:40px;
+                            border: 0px solid #ccc;
+                            border-radius: 8px;
+                            margin-left:0;
+                            margin-bottom:-280px;
+                            margin-left:-80px;
+                            position:relative;
+                            top:-60px;
+                            ">
+                        
+                        <img src="{{ asset('imgs/Vermelha.png') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                            style="width:40px;
+                            border: 0px solid #ccc;
+                            border-radius: 8px;
+                            margin-left:0;
+                            margin-bottom:-280px;
+                            margin-left:-165px;
+                            position:relative;
+                            top:-60px;
+                            ">
+
+                        <img src="{{ asset('imgs/Verde.png') }}" alt="Imagem da Valquíria" class="img-fluid" 
+                            style="width:40px;
+                            border: 0px solid #ccc;
+                            border-radius: 8px;
+                            margin-bottom:-60px;
+                            margin-left:-75px;
+                            position:relative;
+                            top:-60px;
                             ">
                             
                     </div>
@@ -260,6 +335,34 @@
             margin:10px;padding:10px;
             ">
             <h4>Rolar Dados</h4>
+
+            <div>
+            <canvas id="myChart"></canvas>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <script>
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                labels: ['Branca', 'Azul', 'Preto', 'Vermelho', 'Verde'],
+                datasets: [{
+                    backgroundColor: 'rgba(0, 0, 255, 0.2)',
+                    label: '',
+                    data: [10, 100, 10, 10, 10],
+                    borderWidth: 3
+                }]
+                },
+                options: {
+                }
+            });
+            </script>
+
+
+
         </div>
     </div>
 </div>
