@@ -185,7 +185,7 @@
 
                         <script>
                         const ctx = document.getElementById('myChart');
-
+                        
                         new Chart(ctx, {
                             type: 'radar',
                             data: {
@@ -193,7 +193,7 @@
                             datasets: [{
                                 backgroundColor: 'rgba(0, 0, 255, 0.8)',
                                 label: '',
-                                data: [10, 100, 10, 10, 10],
+                                data: [10/*branco*/, 100/*azul*/, 10/*preto*/, 10/*vermelho*/, 10/*verde*/],
                                 borderWidth: 3
                             }]
                             },
