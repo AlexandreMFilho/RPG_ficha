@@ -46,6 +46,9 @@ Route::get('/', function () {
 Route::get('/ficha/{id}', function () {
     return view('/fichas/index');
 });
+Route::get('/teste', function () {
+    return view('/partials.teste');
+});
 Route::get('/welcome', function () {
     return view('/welcome');
 });
