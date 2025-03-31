@@ -335,6 +335,11 @@
             margin:10px;padding:10px;
             ">
             <h4>Rolar Dados</h4>
+               
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#rolarDadosModal">
+        Rolar Dados
+    </button>
+            @include('partials.ModalRolarDados')
 
             <div>
             <canvas id="myChart"></canvas>
