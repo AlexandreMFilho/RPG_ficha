@@ -1,5 +1,5 @@
 <div style="display:flex;flex-direction:row;
-            justify-content:space-around;align-items:flex-start;
+            /* justify-content:space-around;align-items:flex-start; */
             border:1px solid blue; height:300px;
             margin:10px;padding:10px;
             ">
@@ -7,7 +7,7 @@
     <!-- Nome e imagem da Valquíria -->
     <div style="
         display:flex;
-        justify-content:center;align-items:center;
+        position:absolute;
         border:1px solid gray;
         height:280px;max-width:300px;
         border-radius: 8px;
@@ -18,13 +18,16 @@
             border-radius: 8px;
             ">
     </div>
+    <div>
 
-    @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
-    @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
-    @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
-    @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
-    @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
-    @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1'])
+    </div>
+
            
 </div>
     

@@ -9,6 +9,8 @@
         display:flex;flex-direction:column;
         /* justify-content:center;align-items:center; */
         border:1px solid red; height:100%;margin-bottom:10px;
+        position:absolute;
+        width:100%;
         ">
 
             
