@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container card" style="height:95%;border:5px solid green
+<div class="container card" style="height:95%;border:5px solid green;
 
 ">
     <h2 class="text-center text-uppercase">Ficha 1</h2>
@@ -9,20 +9,42 @@
     <div style="
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
         align-items: center;
         border: 3px solid red;
         height: 100%;
         width: 100%;
-        justify-content: space-between;
+        margin-right: 10px;
+        gap: 10px;
+
         
     ">
         <!-- Moldura Personagem -->
-        <div>
+        <div style="
+        border: 3px solid blue;
+        
+    ">
             @include('fichas.partials.MolduraPersonagem', ['imagem' => 'max.jpg'])
         </div>
 
         <!-- Atributos e Deslocamento -->
-        <div style=" display: flex;  flex-direction: column; align-items: center;justify-content: space-around; border: 1px solid #ccc; padding: 15px; width: 280px; height: 80%; border-radius: 8px;">
+        <div style="
+        border: 3px solid blue;
+        ">
+
+        <div style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 280px;
+            height: 80%;
+            border-radius: 8px;
+            
+        "
+        >
             <h4 style="color: brown; text-align: center; margin-bottom: 10px;">Atributos</h4>
             <table style="width: 100%; height: 100%; border-collapse: collapse;">
                 <tr>
@@ -45,17 +67,21 @@
                     <td style="vertical-align: middle;"><strong>Raciocínio:</strong> 1</td>
                     <td style="vertical-align: middle;"><strong>Sabedoria:</strong> 1</td>
                 </tr>
+                
             </table>
         </div>
+
+        </div >
         <!-- Alinhamento e Cores -->
-        <div style="display: flex; flex-grow: 1; align-items: center; padding: 15px; width: 280px; height: 80%;">
-                        <!-- <ul>
-                            <li style="vertical-align: middle;"><strong>Branca:</strong> 1</li>
-                            <li style="vertical-align: middle;"><strong>Vermelha:</strong> 1</li>
-                            <li style="vertical-align: middle;"><strong>Preta:</strong> 1</li>
-                            <li style="vertical-align: middle;"><strong>Verde:</strong> 1</li>
-                            <li style="vertical-align: middle;"><strong>Azul:</strong> 1</li>
-                        </ul> -->
+        <div style="display: flex;
+        flex-grow: 1;
+        align-items: center;
+        padding: 15px;
+        height: 80%;
+        border: 3px solid blue;
+        
+        ">
+
 
                         <div>
                         <canvas style ="width: 240px; positon:relative; padding-bottom:15px" id="myChart"></canvas>
