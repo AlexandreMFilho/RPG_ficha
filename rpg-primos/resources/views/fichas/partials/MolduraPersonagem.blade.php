@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 300px;
     width: 300px;
     margin: 10px;

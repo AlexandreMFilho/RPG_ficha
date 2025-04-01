@@ -4,27 +4,17 @@
 <div class="container card" style="height:95%;border:1px solid black">
     <h2 class="text-center text-uppercase">Ficha 1</h2>
 
-    <!-- <div style="
+    <div style="
         display: flex;
         flex-direction: column;
         /* align-items: center; */
-        /* justify-content: center; */
+        justify-content: center;
         border: 1px solid red;
         height: 100%;
         width: 100%;
         position: absolute;
-    "> -->
-
-                <div style="
-                    display:flex;flex-direction:column;
-                    /* justify-content:center;align-items:center; */
-                    border:1px solid red; 
-                    height:100%;margin-bottom:10px;
-                    position:absolute;
-                    width:100%;
-                    ">
-
-            
+    ">
+               
             @include('fichas.partials.MolduraPersonagem', ['imagem' => 'max.jpg'])
         
             <!-- Atributos e Deslocamento -->
