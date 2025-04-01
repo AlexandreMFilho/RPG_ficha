@@ -168,38 +168,80 @@
                             
         </div>
 
-    </div>
-    <div style="display:flex;flex-direction:row;
+        </div>
+
+        <div class="h-100" style="display:flex;flex-direction:row;
             /* justify-content:space-around;align-items:flex-start; */
             border:1px solid blue;
+            min-height:100px;
             margin:10px;padding:10px;
+            gap:5px;
             ">
             <h4>Deslocamento</h4>
             <p class="lead">9 metros</p>
             
+            <button type="button" class="btn btn-secondary " data-bs-toggle="modal" data-bs-target="#myModal">
+                Equipamento
+            </button>
+
+            <button type="button" class="btn btn-secondary " data-bs-toggle="modal" data-bs-target="#myModal">
+                Mochila
+            </button>
+
+            <button type="button" class="btn btn-secondary " data-bs-toggle="modal" data-bs-target="#myModal">
+                Itens
+            </button>
+
+            @php
+                $modalId = 'ModalEquipamentos';
+                $modalBody = 'Equipamentos na sua Bolsa:';
+                $modalTitle = 'Equipamentos';
+                $equipamentos = [
+                    [
+                        'nome' => 'Espada Longa',
+                        'descricao' => 'Uma espada de lâmina longa e afiada. Ideal para combate corpo a corpo.',
+                        'observacoes' => 'Boa para dano físico, mas lenta para ataques rápidos.',
+                        'dano' => 15,
+                        'peso' => 3.5,
+                        'valor' => 120
+                    ],
+                    [
+                        'nome' => 'Arco Curvo',
+                        'descricao' => 'Arco flexível com boa precisão à longa distância. Ideal para ataques à distância.',
+                        'observacoes' => 'Requer habilidade para ser usado com eficácia.',
+                        'dano' => 10,
+                        'peso' => 2.0,
+                        'valor' => 100
+                    ],
+                    [
+                        'nome' => 'Cajado Mágico',
+                        'descricao' => 'Cajado encantado que canaliza o poder mágico do usuário, aumentando suas habilidades arcanas.',
+                        'observacoes' => 'Necessita de treinamento em magia para ser usado corretamente.',
+                        'dano' => 20,
+                        'peso' => 4.0,
+                        'valor' => 250
+                    ],
+                    [
+                        'nome' => 'Armadura de Ferro',
+                        'descricao' => 'Armadura robusta feita de ferro, oferecendo excelente proteção contra ataques físicos.',
+                        'observacoes' => 'Pode ser pesada e reduzir a mobilidade.',
+                        'dano' => 0,
+                        'peso' => 15.0,
+                        'valor' => 300
+                    ],
+                    [
+                        'nome' => 'Elmo de Ouro',
+                        'descricao' => 'Elmo resistente que oferece boa proteção para a cabeça. Feito de ouro reforçado.',
+                        'observacoes' => 'Protege bem contra impactos, mas é mais caro.',
+                        'dano' => 0,
+                        'peso' => 5.0,
+                        'valor' => 500
+                    ]
+                ];
+            @endphp
+
+            @include('partials.ModalItens', compact('modalId', 'modalTitle', 'modalBody', 'equipamentos'))
             
-            <!-- Equipamentos e Mochila -->
-            <div class="row mt-3">
-                <div class="col-md-4">
-                    <h4>Equipamento</h4>
-                    <ul class="list-group">
-                        
-                            <li class="list-group-item">Tocha</li>
-                        </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>Mochila</h4>
-                    <ul class="list-group">
-                            <li class="list-group-item"> item</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>Itens</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item">item</li>
-                    </ul>
-                </div>
-            </div>
         </div>
     <!-- Personagens associados -->
     <div style="display:flex;flex-direction:column;
@@ -234,6 +276,11 @@
             margin:10px;padding:10px;
             ">
             <h4>Rolar Dados</h4>
+               
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#rolarDadosModal">
+        Rolar Dados
+    </button>
+            @include('partials.ModalRolarDados')
 
             <div>
             <canvas id="myChart"></canvas>
