@@ -97,7 +97,7 @@
                             data: {
                             labels: ['', '', '', '', ''],
                             datasets: [{
-                                backgroundColor: 'rgba(0, 0, 255, 0.8)',
+                                backgroundColor: 'rgba(55, 0, 255, 0.72)',
                                 label: '',
                                 data: [10/*branco*/, 100/*azul*/, 10/*preto*/, 10/*vermelho*/, 10/*verde*/],
                                 borderWidth: 3

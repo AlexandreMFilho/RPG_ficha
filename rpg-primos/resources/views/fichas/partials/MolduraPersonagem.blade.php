@@ -38,12 +38,12 @@
         /* border: 2px solid green; */
         gap: 5px; /* Espaçamento entre os ícones */
     ">
-        @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1', 'color' => '#FFF'])
-        @include('fichas.partials.CartaMana', ['imagem' =>'island.jpg', 'valor' => '1', 'color' => 'blue'])
-        @include('fichas.partials.CartaMana', ['imagem' =>'swamp.jpg', 'valor' => '1', 'color' => '#000'])
-        @include('fichas.partials.CartaMana', ['imagem' =>'montain.jpg', 'valor' => '1', 'color' => 'red'])
-        @include('fichas.partials.CartaMana', ['imagem' =>'forest.jpg', 'valor' => '1', 'color' => 'green'])
-        @include('fichas.partials.CartaMana', ['imagem' =>'colorless.jpg', 'valor' => '1', 'color' => '#fff'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'plains.jpg', 'valor' => '1', 'color' => 'rgb(255, 255, 255)'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'island.jpg', 'valor' => '1', 'color' => 'rgb(34, 56, 255)'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'swamp.jpg', 'valor' => '1', 'color' => 'rgb(104, 104, 104)'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'montain.jpg', 'valor' => '1', 'color' => 'rgb(255, 45, 45)'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'forest.jpg', 'valor' => '1', 'color' => 'rgb(45, 255, 94)'])
+        @include('fichas.partials.CartaMana', ['imagem' =>'colorless.jpg', 'valor' => '1', 'color' => 'rgba(255, 255, 255, 0.34)'])
     </div>
 
 </div>
