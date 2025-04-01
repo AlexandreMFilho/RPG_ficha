@@ -1,75 +1,54 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container card" style="height:95%;border:1px solid black">
+<div class="container card" style="height:95%;border:5px solid green
+
+">
     <h2 class="text-center text-uppercase">Ficha 1</h2>
 
     <div style="
         display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        justify-content: center;
-        border: 1px solid red;
+        flex-direction: row;
+        align-items: center;
+        border: 3px solid red;
         height: 100%;
         width: 100%;
-        position: absolute;
-    ">
-               
-            @include('fichas.partials.MolduraPersonagem', ['imagem' => 'max.jpg'])
+        justify-content: space-between;
         
-            <!-- Atributos e Deslocamento -->
-            
-            <div style="
-                border: 1px solid #ccc; 
-                padding: 15px; 
-                width: 280px; 
-                height: 100%; 
-                border-radius: 8px;
-                display: flex; 
-                flex-direction: column;
-            ">
-                <h4 style="color: brown; text-align: center; margin-bottom: 10px;">Atributos</h4>
-                <div style="flex-grow: 1; display: flex; align-items: center;">
-                    <table style="width: 100%; height: 100%; border-collapse: collapse;">
-                        <tr>
-                            <td style="vertical-align: middle;"><strong>Força:</strong> 1</td>
-                            <td style="vertical-align: middle;"><strong>Destreza:</strong> 1</td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle;"><strong>Constituição:</strong> 1</td>
-                            <td style="vertical-align: middle;"><strong>Inteligência:</strong> 1</td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle;"><strong>Percepção:</strong> 1</td>
-                            <td style="vertical-align: middle;"><strong>Carisma:</strong> 1</td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle;"><strong>Agilidade:</strong> 1</td>
-                            <td style="vertical-align: middle;"><strong>Vigor:</strong> 1</td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle;"><strong>Raciocínio:</strong> 1</td>
-                            <td style="vertical-align: middle;"><strong>Sabedoria:</strong> 1</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+    ">
+        <!-- Moldura Personagem -->
+        <div>
+            @include('fichas.partials.MolduraPersonagem', ['imagem' => 'max.jpg'])
+        </div>
 
-            <div style="display:flex;flex-direction:row;
-            justify-content:space-around;align-items:flex-start;
-            border:1px solid blue; height:280px;
-            ">
-                <div style="
-                    border: 1px solid #ccc; 
-                    padding: 15px; 
-                    width: 280px; 
-                    height: 100%; 
-                    border-radius: 8px;
-                    display: flex; 
-                    flex-direction: column;
-                ">
-                    <h4 style="color: brown; text-align: center; margin-bottom: 10px;">Cor</h4>
-                    <div style="flex-grow: 1; display: flex; align-items: center;">
+        <!-- Atributos e Deslocamento -->
+        <div style=" display: flex;  flex-direction: column; align-items: center;justify-content: space-around; border: 1px solid #ccc; padding: 15px; width: 280px; height: 80%; border-radius: 8px;">
+            <h4 style="color: brown; text-align: center; margin-bottom: 10px;">Atributos</h4>
+            <table style="width: 100%; height: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="vertical-align: middle;"><strong>Força:</strong> 1</td>
+                    <td style="vertical-align: middle;"><strong>Destreza:</strong> 1</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle;"><strong>Constituição:</strong> 1</td>
+                    <td style="vertical-align: middle;"><strong>Inteligência:</strong> 1</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle;"><strong>Percepção:</strong> 1</td>
+                    <td style="vertical-align: middle;"><strong>Carisma:</strong> 1</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle;"><strong>Agilidade:</strong> 1</td>
+                    <td style="vertical-align: middle;"><strong>Vigor:</strong> 1</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle;"><strong>Raciocínio:</strong> 1</td>
+                    <td style="vertical-align: middle;"><strong>Sabedoria:</strong> 1</td>
+                </tr>
+            </table>
+        </div>
+        <!-- Alinhamento e Cores -->
+        <div style="display: flex; flex-grow: 1; align-items: center; padding: 15px; width: 280px; height: 80%;">
                         <!-- <ul>
                             <li style="vertical-align: middle;"><strong>Branca:</strong> 1</li>
                             <li style="vertical-align: middle;"><strong>Vermelha:</strong> 1</li>
@@ -161,14 +140,10 @@
                             top:-60px;
                             ">
                             
-                    </div>
-                </div>
-
-            </div>
-
         </div>
 
-        <div style="display:flex;flex-direction:row;
+    </div>
+    <div style="display:flex;flex-direction:row;
             /* justify-content:space-around;align-items:flex-start; */
             border:1px solid blue;
             margin:10px;padding:10px;
@@ -200,9 +175,8 @@
                 </div>
             </div>
         </div>
-
-        <!-- Personagens associados -->
-        <div style="display:flex;flex-direction:column;
+    <!-- Personagens associados -->
+    <div style="display:flex;flex-direction:column;
             justify-content:space-around;align-items:flex-start;
             border:1px solid blue;
             margin:10px;padding:10px;
@@ -227,10 +201,8 @@
                     ">
                 </a>
             </div>
-            
-            <!-- Robar Dados -->
         </div>
-        <div style="display:flex;flex-direction:row;
+            <div style="display:flex;flex-direction:row;
             /* justify-content:space-around;align-items:flex-start; */
             border:1px solid blue;
             margin:10px;padding:10px;
@@ -265,7 +237,8 @@
 
 
         </div>
-    </div>
 </div>
+
+
 
 @endsection
