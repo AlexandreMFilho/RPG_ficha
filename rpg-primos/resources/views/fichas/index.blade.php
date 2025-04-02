@@ -11,10 +11,8 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        /* border: 3px solid red; */
-        height: 100%;
-        width: 100%;
-        margin-right: 10px;
+        border: 3px solid gray;
+        margin: 0px 10px 0px 10px;
         gap: 10px;
 
         
@@ -29,48 +27,34 @@
 
         <!-- Atributos e Deslocamento -->
         <div style="
+        
         /* border: 3px solid blue; */
-        height: 80%;
+        
         ">
 
-        <div style="
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            border: 1px solid #ccc;
-            padding: 15px;
-            width: 280px;
-            height: 80%;
-            border-radius: 8px;
-            
-        "
-        >
-            <h4 style="color: brown; text-align: center; margin-bottom: 10px;">Atributos</h4>
-            <table style="width: 100%; height: 100%; border-collapse: collapse;">
-                <tr>
-                    <td style="vertical-align: middle;"><strong>Força:</strong> 1</td>
-                    <td style="vertical-align: middle;"><strong>Destreza:</strong> 1</td>
-                </tr>
-                <tr>
-                    <td style="vertical-align: middle;"><strong>Constituição:</strong> 1</td>
-                    <td style="vertical-align: middle;"><strong>Inteligência:</strong> 1</td>
-                </tr>
-                <tr>
-                    <td style="vertical-align: middle;"><strong>Percepção:</strong> 1</td>
-                    <td style="vertical-align: middle;"><strong>Carisma:</strong> 1</td>
-                </tr>
-                <tr>
-                    <td style="vertical-align: middle;"><strong>Agilidade:</strong> 1</td>
-                    <td style="vertical-align: middle;"><strong>Vigor:</strong> 1</td>
-                </tr>
-                <tr>
-                    <td style="vertical-align: middle;"><strong>Raciocínio:</strong> 1</td>
-                    <td style="vertical-align: middle;"><strong>Sabedoria:</strong> 1</td>
-                </tr>
-                
-            </table>
-        </div>
+        @php
+        $atributos = [
+            ['nomeAtributo' => 'Força', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Destreza', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Constituição', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Inteligência', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Percepção', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Carisma', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Agilidade', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Vigor', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
+            ['nomeAtributo' => 'Sabedoria', 'valorAtributo' => 1]
+        ];
+
+        @endphp
+            @include('fichas.partials.Atributos', compact('atributos'))
+
 
         </div >
         <!-- Alinhamento e Cores -->
