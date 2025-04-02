@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container card" style="height:95%;border:1px solid black">
-    <h2 class="text-center text-uppercase">Ficha 1</h2>
+    <h2 class="text-center text-uppercase">Ficha 37</h2>
 
     <!-- <div  style="display:flex;flex-direction:row;"> -->
     <div style="
