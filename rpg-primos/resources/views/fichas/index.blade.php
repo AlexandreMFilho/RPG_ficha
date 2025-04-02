@@ -11,7 +11,7 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        border: 3px solid red;
+        /* border: 3px solid red; */
         height: 100%;
         width: 100%;
         margin-right: 10px;
@@ -21,7 +21,7 @@
     ">
         <!-- Moldura Personagem -->
         <div style="
-        border: 3px solid blue;
+        /* border: 3px solid blue; */
         
     ">
             @include('fichas.partials.MolduraPersonagem', ['imagem' => 'max.jpg'])
@@ -29,7 +29,8 @@
 
         <!-- Atributos e Deslocamento -->
         <div style="
-        border: 3px solid blue;
+        /* border: 3px solid blue; */
+        height: 80%;
         ">
 
         <div style="
@@ -74,18 +75,14 @@
         </div >
         <!-- Alinhamento e Cores -->
         <div style="display: flex;
-        flex-grow: 1;
         align-items: center;
-        padding: 15px;
         height: 80%;
-        border: 3px solid blue;
+        width: 260px;
+        /* border: 3px solid blue; */
         
         ">
 
-
-                        <div>
-                        <canvas style ="width: 240px; positon:relative; padding-bottom:15px" id="myChart"></canvas>
-                        </div>
+                        <canvas style =" " id="myChart"></canvas>
 
                         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
