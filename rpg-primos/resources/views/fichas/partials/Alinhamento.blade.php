@@ -5,7 +5,7 @@
         /* border: 3px solid blue; */
         
         ">
-        
+
 
                         <canvas style =" " id="myChart"></canvas>
 
@@ -21,7 +21,12 @@
                             datasets: [{
                                 backgroundColor: 'rgba(55, 0, 255, 0.72)',
                                 label: '',
-                                data: [10/*branco*/, 100/*azul*/, 10/*preto*/, 10/*vermelho*/, 10/*verde*/],
+                                data: [
+                                    {{ $cores[0]['Branca'] +10}} /*branco*/,
+                                    {{ $cores[1]['Azul'] +10}} /*azul*/,
+                                    {{ $cores[2]['Preta']+10 }} /*preto*/,
+                                    {{ $cores[3]['Vermelha']+10 }} /*vermelho*/,
+                                    {{ $cores[4]['Verde'] +10}} /*verde*/],
                                 borderWidth: 3
                             }]
                             },
@@ -37,9 +42,9 @@
 
                         <img src="{{ asset('imgs/Branca.png') }}" alt="Imagem da Valquíria" class="img-fluid" 
                             style="width:40px;
-                            border: 0px solid #ccc;
+                            border: 2px solid #red;
                             border-radius: 8px;
-                            margin-left:-140px;
+                            margin-left:-150px;
                             margin-top:-80px;
                             position:relative;
                             top:-60px;
