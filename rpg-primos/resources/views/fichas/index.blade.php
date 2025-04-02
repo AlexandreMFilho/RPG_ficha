@@ -45,10 +45,6 @@
             ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
             ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
             ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
-            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
-            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
-            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
-            ['nomeAtributo' => 'Raciocínio', 'valorAtributo' => 1],
             ['nomeAtributo' => 'Sabedoria', 'valorAtributo' => 1]
         ];
 
@@ -60,11 +56,11 @@
         <!-- Alinhamento e Cores -->
         @php
             $cores = [
-                ['nome' => 'Branca', 'valor' => 10],
-                ['nome' => 'Azul', 'valor' => 100],
-                ['nome' => 'Preta', 'valor' => 10],
-                ['nome' => 'Vermelha', 'valor' => 10],
-                ['nome' => 'Verde', 'valor' => 10]
+                ['Branca' => 10],
+                ['Azul> ' => 100],
+                ['Preta ' => 10],
+                ['Vermelha' => 10],
+                ['Verde ' => 10]
             ];
         @endphp
         @include('fichas.partials.Alinhamento', compact('cores'))
