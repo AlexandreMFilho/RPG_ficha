@@ -6,8 +6,7 @@
     <!-- Mana branca -->
     <span style="
         position: absolute;
-        bottom: 0;
-        top: 0px;
+        top: 0;
         left: 50%;
         transform: translateX(-50%);
         font-size: 26px;
@@ -15,20 +14,16 @@
         transition: color 0.9s ease;
         text-align: center;
         color: {{$color}};
-        text-shadow: 0 0 0.3em {{$color}}, 0 0 0.3em {{$color}}, 0 0 0.3em {{$color}}, 0 0 0.3em {{$color}};
-        
+        text-shadow: 0 0 0.3em {{$color}}, 0 0 0.3em {{$color}};
         -webkit-text-stroke: 1px black;
     " 
     onmouseover="
-    this.style.color='white'
-    this.fontSize='100px';
-    this.style.textShadow: 0 0 0.2em {{$color}}, 0 0 0.3em {{$color}}, 0 0 0.3em {{$color}}, 0 0 0.3em {{$color}};
+    this.style.color='white';
+    this.style.textShadow='0 0 0.2em {{$color}}, 0 0 0.3em {{$color}}';
     "
     onmouseout="
     this.style.color='{{$color}}';
-    this.fontSize='26px';
-    this.style.textShadow: 0 0 0.2em {{$color}}, 0 0 0.3em {{$color}}, 0 0 0.3em {{$color}}, 0 0 0.3em {{$color}};
-
+    this.style.textShadow='0 0 0.2em {{$color}}, 0 0 0.3em {{$color}}';
     "
     onclick="openDialog(this, '{{$imagem}}', '{{$color}}', '{{$valor}}')">
         {{$valor}}
@@ -46,7 +41,6 @@ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,
            top: 50%; 
            left: 50%; 
            transform: translate(-50%, -50%); 
-           background: {{$color}}; 
            border-radius: 8px; 
            padding: 20px; 
            z-index: 1000; 
@@ -56,16 +50,16 @@ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,
            align-items: center;
            background-color: rgba(255, 255, 255, 0.5);
         ">
-        <img id="modalImage" src="" alt="Imagem Mana" style="width: 200px; height: auto; margin-top: 15px; position:absolute"/>
-        <div style="margin-bottom: 50px;">
-            <p style="margin-bottom: 15px;">Ajustar Valor de Mana: {{$imagem}}</p>
-            <p id="modalValue" style="font-size: 24px; font-weight: bold; margin-bottom: 50px; color:white">{{$valor}}</p>
-            <div style="display: flex; align-items: center; margin-bottom: 30px;">
-                <button onclick="incrementValue()">+</button>
-                <button onclick="decrementValue()">-</button>
+        <img id="modalImage" src="" alt="Imagem Mana" style="width: 200px; height: auto; margin-top: 15px;"/>
+        <button class="btn btn-danger" style="font-weight: bold; border: 1px solid black; position:absolute; right: 5px ; top: 5px   ;" onclick="closeDialog()">x</button>
+        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 50px; position: absolute; text-align: center;color: {{$color}};">
+            <p style="font-size: 16px; margin-top: 25px;margin-bottom: 30px; color: black; background-color: rgba(255, 255, 255, 0.73); z-index: 999; font-weight: bold;">Ajustar Valor de Mana:</p>
+            <p id="modalValue" style="font-size: 50px; font-weight: bold; margin-bottom: 50px; color: black; text-shadow: 0 0 0.2em {{$color}}, 0 0 0.3em {{$color}};">{{$valor}}</p>
+            <div style="display: flex; align-items: center; margin-bottom:  40px; gap: 10px; justify-content: space-around; width:120%">
+                <button class="btn btn-light" style="font-weight: bold;border: 1px solid black " onclick="incrementValue()">+</button>
+                <button class="btn btn-light" style="font-weight: bold;border: 1px solid black " onclick="decrementValue()">-</button>
             </div>
-            <button onclick="closeDialog()">Close</button>
-
+            <button class="btn btn-light" style="font-weight: bold; border: 1px solid black" onclick="closeDialog()">Close</button>
         </div>
     </div>
 </div>
@@ -75,38 +69,32 @@ let currentSpan;
 let currentModal;
 
 function openDialog(span, imagem, color, valor) {
-    // Selecionar o modal e atualizar as informações
     currentSpan = span;
     currentModal = document.getElementById('manaOverlay');
     
-    // Atualiza o valor no modal
     document.getElementById('modalValue').innerText = valor;
 
-    // Atualiza a imagem do modal
     const modalImage = document.getElementById('modalImage');
-    modalImage.src = "{{ asset('imgs') }}/" + imagem; // Atualiza a fonte da imagem no modal
+    modalImage.src = "{{ asset('imgs') }}/" + imagem;
 
-    // Exibir o modal
     currentModal.style.display = 'block';
 }
 
 function closeDialog() {
-    // Esconde o modal
     currentModal.style.display = 'none';
 }
 
 function incrementValue() {
     let currentValue = parseInt(currentSpan.innerText);
     currentSpan.innerText = currentValue + 1;
-    document.getElementById('modalValue').innerText = currentSpan.innerText; // Atualiza o valor no modal
+    document.getElementById('modalValue').innerText = currentSpan.innerText;
 }
 
 function decrementValue() {
     let currentValue = parseInt(currentSpan.innerText);
-    if (currentValue > 0) { // Prevent negative values
+    if (currentValue > 0) {
         currentSpan.innerText = currentValue - 1;
-        document.getElementById('modalValue').innerText = currentSpan.innerText; // Atualiza o valor no modal
+        document.getElementById('modalValue').innerText = currentSpan.innerText;
     }
 }
-
 </script>
