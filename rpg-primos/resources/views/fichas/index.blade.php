@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container card" style="height:95%;border:5px solid green;">
     <h2 class="text-center text-uppercase">Ficha 1</h2>
+
 
     <div style="
         display: flex;
