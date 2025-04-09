@@ -5,7 +5,6 @@
 <div class="container card" style="height:95%;border:5px solid green;">
     <h2 class="text-center text-uppercase">Ficha 1</h2>
 
-
     <div style="
         display: flex;
         flex-direction: row;
@@ -16,12 +15,12 @@
         gap: 10px;
     ">
         <!-- Moldura Personagem -->
-        <div style="">
+        <div>
             @include('fichas.partials.MolduraPersonagem', ['imagem' => 'max.jpg'])
         </div>
 
         <!-- Atributos e Deslocamento -->
-        <div style="">
+        <div>
             @php
                 $atributos = [
                     ['nomeAtributo' => 'Força', 'valorAtributo' => 1],
@@ -53,15 +52,36 @@
             @include('fichas.partials.Alinhamento', compact('cores'))
         </div>
     </div>
+    
+    <!-- Personagens associados -->
+     <div style="display:flex;align-items:center; justify-content:space-around;">
+         <div style="display:flex;flex-direction:column;
+             justify-content:space-around;align-items:flex-start;
+             border:1px solid blue;
+             margin:10px;padding:10px;">
+             <div>
+                 <h4>Heróis</h4>
+             </div>
+             <div id="carousel">
+                 <a href="" class="item">
+                     <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="border-radius: 100px;">
+                 </a>
+                 <a href="">
+                     <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="border-radius: 100px;">
+                 </a>
+                 <a href="">
+                     <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="border-radius: 100px;">
+                 </a>
+             </div>
+         </div>
 
-    <div class="h-100" style="display:flex;flex-direction:row;
+         <div class="h-75" style="display:flex;flex-direction:row;
         border:1px solid blue;
         min-height:100px;
         margin:10px;padding:10px;
         gap:5px;">
-        <h4>Deslocamento</h4>
-        <p class="lead">9 metros</p>
-        
+
+
         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal">
             Equipamento
         </button>
@@ -123,42 +143,14 @@
         @endphp
 
         @include('partials.ModalItens', compact('modalId', 'modalTitle', 'modalBody', 'equipamentos'))
-    </div>
 
-    <!-- Personagens associados -->
-    <div style="display:flex;flex-direction:column;
-        justify-content:space-around;align-items:flex-start;
-        border:1px solid blue;
-        margin:10px;padding:10px;">
-        <div>
-            <h4>Heróis</h4>
-        </div>
-        <div id="carousel">
-            <a href="" class="item">
-                <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="border-radius: 100px;">
-            </a>
-            <a href="">
-                <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="border-radius: 100px;">
-            </a>
-            <a href="">
-                <img src="{{asset('imgs/mulher_verde.jpg')}}" alt="Personagem" class="img-thumbnail" width="130" style="border-radius: 100px;">
-            </a>
-        </div>
-    </div>
-
-    <div style="display:flex;flex-direction:row;
-        border:1px solid blue;
-        margin:10px;padding:10px;">
-        <h4>Rolar Dados</h4>
+        <!-- <h4>Rolar Dados</h4> -->
         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#rolarDadosModal">
             Rolar Dados
         </button>
         @include('partials.ModalRolarDados')
 
-        <div>
-            <canvas id="myChart"></canvas>
-        </div>
-
+       
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             const ctx = document.getElementById('myChart');
@@ -178,5 +170,7 @@
             });
         </script>
     </div>
+     </div>
+
 </div>
 @endsection
