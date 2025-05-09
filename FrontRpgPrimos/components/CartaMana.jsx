@@ -23,7 +23,9 @@ const CartaMana = ({ imagem, valor: valorInicial, color }) => {
         src={`/imgs/${imagem}`}
         alt={`Mana ${imagem}`}
         width="40"
-        style={{ borderRadius: '8px' }}
+        onClick={() => setVisible(true)}
+        style={{
+          cursor: 'pointer'}}
       />
 
       {/* Valor sobreposto */}
@@ -39,6 +41,7 @@ const CartaMana = ({ imagem, valor: valorInicial, color }) => {
           color: color,
           textShadow: `0 0 0.3em ${color}, 0 0 0.3em ${color}`,
           WebkitTextStroke: '1px black',
+          WebkitTextFillColor: color,
           cursor: 'pointer'
         }}
         onMouseOver={(e) => {
@@ -57,33 +60,22 @@ const CartaMana = ({ imagem, valor: valorInicial, color }) => {
       <Dialog
         visible={visible}
         onHide={() => setVisible(false)}
-        header={`Gerenciar Mana: ${imagem}`}
+        header="Ajustar Mana"
+        footer={
+          <Button className="flex" label="Close" severity="secondary" onClick={() => setVisible(false)} style={{margin:"10px"}}/>
+        }
         style={{ width: '300px' }}
-        className="p-fluid"
       >
-        <div style={{ textAlign: 'center' }}>
-          <img
-            src={`/imgs/${imagem}`}
-            alt={`Imagem da Mana ${imagem}`}
-            style={{ width: '200px', marginBottom: '20px' }}
-          />
-          <h3 style={{ color: color }}>{valor}</h3>
-          <div style={{ marginBottom: '20px' }}>
-            <Button
-              icon="pi pi-plus"
-              label="Aumentar"
-              onClick={incrementar}
-              className="p-button-success mr-2"
-            />
-            <Button
-              icon="pi pi-minus"
-              label="Diminuir"
-              onClick={decrementar}
-              className="p-button-danger ml-2"
-              disabled={valor <= 0}
-            />
+        <div style={{ textAlign: 'center'}}>
+          {/* Imagem da Carta */}
+          <img src={`/imgs/${imagem}`} alt={`Mana ${imagem}`} style={{ width: '200px'}} />
+
+          {/* Botões de Aumentar/Diminuir */}
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-100px' , minWidth: '100%', gap: '15px', }}>
+            <Button icon="pi pi-plus" onClick={incrementar} className="p-button-success btn-green" severity="success"/>
+            <div style={{ fontSize: '36px', fontWeight: 'bold', color: color, WebkitTextStroke: '1px black', WebkitTextFillColor: color }}>{valor}</div>
+            <Button icon="pi pi-minus" onClick={decrementar} className="p-button-danger" disabled={valor <= 0} severity="danger" />
           </div>
-          <Button label="Fechar" onClick={() => setVisible(false)} />
         </div>
       </Dialog>
     </div>
