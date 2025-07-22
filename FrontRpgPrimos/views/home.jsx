@@ -2,6 +2,8 @@ import React from 'react';
 import MolduraPersonagem from '../components/MolduraPersonagem';
 import max from '../imgs/max.jpg';
 import AtributosCard from "../components/AtributosCard";
+import AlinhamentoChart from "../components/AlinhamentoChart";
+
 
 const Home = () => {
 
@@ -17,6 +19,14 @@ const atributos = [
   { nomeAtributo: "Vigor", valorAtributo: 1 },
   { nomeAtributo: "Raciocínio", valorAtributo: 1 },
   { nomeAtributo: "Sabedoria", valorAtributo: 1 },
+];
+
+const cores = [
+  { Branca: 10 },
+  { Azul: 100 },
+  { Preta: 10 },
+  { Vermelha: 10 },
+  { Verde: 10 },
 ];
 
     return (
@@ -41,7 +51,7 @@ const atributos = [
                 <AtributosCard atributos={atributos} />
 
                 {/* Alinhamento */}
-                <AtributosCard atributos={atributos} />
+                <AlinhamentoChart cores={cores} />
 
             </div>
 
