@@ -8,9 +8,12 @@ const MolduraPersonagem = ({ imagem }) => {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-end',
-      height: '300px',
-      width: '300px',
-      margin: '10px',
+      backgroundColor: 'rgba(0, 4, 255, 0.77)',
+      borderRadius: '8px',
+       
+      minHeight: '300px',
+      minWidth: '300px',
+      // margin: '10px',
       padding: '10px',
       position: 'relative'
     }}>
@@ -18,7 +21,7 @@ const MolduraPersonagem = ({ imagem }) => {
       <div style={{
         display: 'flex',
         position: 'relative',
-        border: '1px solid gray',
+        // border: '1px solid gray',
         height: '280px',
         width: '100%',
         borderRadius: '8px'
@@ -35,7 +38,7 @@ const MolduraPersonagem = ({ imagem }) => {
         transform: 'translateX(-50%)',
         display: 'flex',
         justifyContent: 'center',
-        gap: '5px'
+        // gap: '5px'
       }}>
         <CartaMana imagem="plains.jpg" valor={1} color="rgb(255, 255, 255)" />
         <CartaMana imagem="island.jpg" valor={1} color="rgb(34, 56, 255)" />
