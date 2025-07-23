@@ -1,0 +1,4 @@
+/* styles.css ou global.css */
+.p-carousel-prev, .p-carousel-next {
+  color: black !important;
+}
