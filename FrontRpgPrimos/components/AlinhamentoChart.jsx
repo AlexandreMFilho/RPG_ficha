@@ -10,11 +10,11 @@ import {
   Legend,
 } from "chart.js";
 
-import branca from "@/assets/imgs/Branca.png";
-import azul from "@/assets/imgs/Azul.png";
-import preta from "@/assets/imgs/Preta.png";
-import vermelha from "@/assets/imgs/Vermelha.png";
-import verde from "@/assets/imgs/Verde.png";
+import branca from "../src/assets/imgs/Branca.png";
+import azul from "../src/assets/imgs/Azul.png";
+import preta from "../src/assets/imgs/Preta.png";
+import vermelha from "../src/assets/imgs/Vermelha.png";
+import verde from "../src/assets/imgs/Verde.png";
 
 ChartJS.register(
   RadialLinearScale,
@@ -67,12 +67,14 @@ const AlinhamentoChart = ({ cores = [] }) => {
       style={{
         display: "flex",
         alignItems: "center",
-        height: "80%",
-        width: "260px",
+        justifyContent: "center",
+        height: "300px",
+        width: "300px",
         position: "relative",
+        border: "2px solid #ccc",
       }}
     >
-      <div style={{ width: "100%", height: "260px" }}>
+      <div style={{ width: "100%", height: "250px" }}>
         <Radar data={data} options={options} />
       </div>
 
@@ -81,54 +83,54 @@ const AlinhamentoChart = ({ cores = [] }) => {
         src={branca}
         alt="Branca"
         style={{
-          width: "40px",
+          width: "30px",
           borderRadius: "8px",
           position: "absolute",
-          top: "-40px",
-          left: "55px",
+          top: "0px",
+          left: "134px",
         }}
       />
       <img
         src={azul}
         alt="Azul"
         style={{
-          width: "40px",
+          width: "30px",
           borderRadius: "8px",
           position: "absolute",
-          top: "40px",
-          right: "20px",
+          top: "90px",
+          right: "10px",
         }}
       />
       <img
         src={preta}
         alt="Preta"
         style={{
-          width: "40px",
+          width: "30px",
           borderRadius: "8px",
           position: "absolute",
-          bottom: "-30px",
-          left: "25px",
+          bottom: "30px",
+          left: "54px",
         }}
       />
       <img
         src={vermelha}
         alt="Vermelha"
         style={{
-          width: "40px",
+          width: "30px",
           borderRadius: "8px",
           position: "absolute",
-          bottom: "-30px",
-          left: "-15px",
+          bottom: "170px",
+          left: "10px",
         }}
       />
       <img
         src={verde}
         alt="Verde"
         style={{
-          width: "40px",
+          width: "30px",
           borderRadius: "8px",
           position: "absolute",
-          bottom: "-20px",
+          bottom: "30px",
           right: "55px",
         }}
       />
