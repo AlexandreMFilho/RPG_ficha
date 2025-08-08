@@ -9,7 +9,7 @@ const HeroisCarousel = ({ herois = [] }) => {
                 src={heroi.img}
                 alt="Personagem"
                 className="img-thumbnail"
-                width="130"
+                width="150"
                 style={{ borderRadius: "100px" }}
             />
         </a>
@@ -20,34 +20,44 @@ const HeroisCarousel = ({ herois = [] }) => {
             style={{
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "space-around",
+                justifyContent: "flex-start",
                 alignItems: "flex-start",
-                border: "1px solid blue",
                 color: "black",
                 backgroundColor: "gray",
+                width: '100%', // Ensure the parent takes up full width of its container
+                padding: '10px', // Add some padding for spacing
+                width: '100%',
             }}
         >
-            <div>
-                <h4>Heróis</h4>
-            </div>
-            <div id="carousel" style={{ width: "100%" }}>
+            <h4>Heróis</h4>
+            <div id="carousel" style={{ width: "100%", overflow: "hidden" }}>
                 <Carousel
                     value={herois}
                     itemTemplate={itemTemplate}
                     numVisible={3}
                     numScroll={1}
                     circular
-                    autoplayInterval={5000}
-                    pt={{
-                        previousButton: {
-                            className: "text-black",
-                        },
-                        nextButton: {
-                            className: "text-black",
-                        },
-                    }}
-                />
 
+
+                    pt={{
+                    previousButton: {
+                        style: {
+                            backgroundColor: 'blue',
+                            color: 'white',
+                            borderRadius: '50%',
+                            label: 'Anterior'
+                        }
+                    },
+                    nextButton: {
+                        style: {
+                            backgroundColor: 'blue',
+                            color: 'white',
+                            borderRadius: '50%',
+                            icon: 'pi pi-chevron-right'
+                        }
+                    }
+            }}
+/>
             </div>
         </div>
     );

@@ -12,6 +12,17 @@ import tourobandido from "../src/assets/imgs/touro_bandido.jpeg";
 import cherife from "../src/assets/imgs/touro_cherife.jpeg";
 import vice from "../src/assets/imgs/touro_vice.jpeg";
 
+import equip from "../public/game-icons/abdominal-armor.svg";
+import mochila from "../public/game-icons/backpack.svg";
+import itens from "../public/game-icons/standing-potion.svg";
+import dados from "../public/game-icons/rolling-dices.svg";
+
+
+
+
+
+import { Button } from 'primereact/button';
+
 const Home = () => {
 
   const herois = [
@@ -45,12 +56,14 @@ const cores = [
 ];
 
     return (
-        <div className='card' style={{ 
-            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-            height: '90vh' , width:'100vh', maxWidth:'100%', minWidth:'800px',  
-            backgroundColor:'gray',
-            // border:'1px solid black'
-            }}>
+      
+      <div className='card' style={{ 
+        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+        height: '90vh' , width:'100vh', maxWidth:'100%', minWidth:'800px',  
+        backgroundColor:'gray',
+        // border:'1px solid black'
+      }}>
+              <h1>MaxMillium Maximus</h1>
             
             <div style={{
                 display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',
@@ -70,21 +83,75 @@ const cores = [
 
             </div>
 
-            <div style={{
-                display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',
-            backgroundColor:'gray',
-            //  border:'1px solid black',
-            maxHeight:'300px',
+            <HeroisCarousel herois={herois} />
 
+            <div style={{
+              display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',
+              backgroundColor:'gray',
+              // border:'1px solid black',
+              maxHeight:'300px',
+              width:'100%',
             }}>
-                {/* <Herois */}
-                 <HeroisCarousel herois={herois} />
-            <h1>Welcome to RPG Ficha</h1>
+              <Button 
+              label="Equipamentos" 
+              icon={
+                <img
+                src={equip}
+                alt="Equipamentos"
+                width="20"
+                style={{ marginRight: 8, verticalAlign: 'middle' }}
+                />
+              } 
+              size="large" 
+              className="p-button-text"
+              />
+              
+              <Button 
+              label="Itens" 
+              icon={
+                <img
+                src={itens}
+                alt="Equipamentos"
+                width="20"
+                style={{ marginRight: 8, verticalAlign: 'middle' }}
+                />
+              } 
+              size="large" 
+              className="p-button-text"
+              />
+
+              <Button 
+              label="Mochila" 
+              icon={
+                <img
+                src={mochila}
+                alt="Equipamentos"
+                width="20"
+                style={{ marginRight: 8, verticalAlign: 'middle' }}
+                />
+              } 
+              size="large" 
+              className="p-button-text"
+              />
+
+              <Button 
+              label="Rolar Dados" 
+              icon={
+                <img
+                src={dados}
+                alt="Equipamentos"
+                width="20"
+                style={{ marginRight: 8, verticalAlign: 'middle' }}
+                />
+              } 
+              size="large" 
+              className="p-button-text"
+              />
 
             </div>
             <div>
-                {/* <MolduraPersonagem imagem={max}/> */}
-            <h1>Welcome to RPG Ficha</h1>
+              {/* <MolduraPersonagem imagem={max}/> */}
+            {/* <h1>Welcome to RPG Ficha</h1> */}
 
             </div>
         </div>

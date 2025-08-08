@@ -2,3 +2,47 @@
 .p-carousel-prev, .p-carousel-next {
   color: black !important;
 }
+/* In HeroisCarousel.css */
+
+/* Target the carousel container */
+.p-carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Target the carousel content/viewport */
+.p-carousel-container {
+    display: flex;
+    justify-content: center; /* Center the items if they don't fill the space */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Target the carousel item container */
+.p-carousel-items-content {
+    overflow: hidden;
+}
+
+/* Make sure the carousel items are also constrained */
+.p-carousel .p-carousel-items-content .p-carousel-item {
+    width: 100%; /* or a percentage value */
+    display: flex;
+    justify-content: center;
+}
+
+
+.custom-carousel .p-carousel-prev,
+.custom-carousel .p-carousel-next {
+  background-color: white !important;
+  border: 1px solid black !important;
+}
+
+.custom-carousel .p-carousel-prev:hover,
+.custom-carousel .p-carousel-next:hover {
+  background-color: #f0f0f0 !important;
+}
+
+.custom-carousel .p-carousel-prev-icon,
+.custom-carousel .p-carousel-next-icon {
+  color: black !important;
+}
