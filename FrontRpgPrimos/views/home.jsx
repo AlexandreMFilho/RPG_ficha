@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MolduraPersonagem from '../components/MolduraPersonagem';
 import max from '../imgs/max.jpg';
 import AtributosCard from "../components/AtributosCard";
@@ -22,8 +22,25 @@ import dados from "../public/game-icons/rolling-dices.svg";
 
 
 import { Button } from 'primereact/button';
+import { Dialog } from 'primereact/dialog';
 
 const Home = () => {
+const [isEquipModalOpen, setIsEquipModalOpen] = useState(false);
+const [isItensModalOpen, setIsItensModalOpen] = useState(false);
+const [isMochilaModalOpen, setIsMochilaModalOpen] = useState(false);
+const [isRolarDadosModalOpen, setIsRolarDadosModalOpen] = useState(false);
+
+const handleOpenEquipModal = () => setIsEquipModalOpen(true);
+const handleCloseEquipModal = () => setIsEquipModalOpen(false);
+
+const handleOpenItensModal = () => setIsItensModalOpen(true);
+const handleCloseItensModal = () => setIsItensModalOpen(false);
+
+const handleOpenMochilaModal = () => setIsMochilaModalOpen(true);
+const handleCloseMochilaModal = () => setIsMochilaModalOpen(false);
+
+const handleOpenRolarDadosModal = () => setIsRolarDadosModalOpen(true);
+const handleCloseRolarDadosModal = () => setIsRolarDadosModalOpen(false);
 
   const herois = [
     { img: mulherVerde, link: "#" },
@@ -89,68 +106,78 @@ const cores = [
               display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',
               backgroundColor:'gray',
               // border:'1px solid black',
-              maxHeight:'300px',
-              width:'100%',
-            }}>
-              <Button 
-              label="Equipamentos" 
-              icon={
-                <img
-                src={equip}
-                alt="Equipamentos"
-                width="20"
-                style={{ marginRight: 8, verticalAlign: 'middle' }}
+                maxHeight:'300px',
+                width:'100%',
+              }}>
+                <Button 
+                label="Equipamentos" 
+                style={{color: 'black'}}
+                size="large" 
+                className="p-button-text" 
+                onClick={handleOpenEquipModal}
+                icon={
+                  <img src={equip} alt="Equipamentos" width="20" style={{ marginRight: 8, verticalAlign: 'middle' }} />
+                } 
                 />
-              } 
-              size="large" 
-              className="p-button-text"
-              />
-              
-              <Button 
-              label="Itens" 
-              icon={
-                <img
-                src={itens}
-                alt="Equipamentos"
-                width="20"
-                style={{ marginRight: 8, verticalAlign: 'middle' }}
-                />
-              } 
-              size="large" 
-              className="p-button-text"
-              />
+                <Dialog header="Equipamentos" visible={isEquipModalOpen} style={{ width: '50vw' }} onHide={handleCloseEquipModal}>
+                <h1>EQUIPAMENTOS</h1>
+                <p>Lorem</p>
+                </Dialog>  
 
-              <Button 
-              label="Mochila" 
-              icon={
-                <img
-                src={mochila}
-                alt="Equipamentos"
-                width="20"
-                style={{ marginRight: 8, verticalAlign: 'middle' }}
+                <Button 
+                label="Itens" 
+                style={{color: 'black'}}
+                icon={
+                  <img
+                  src={itens}
+                  alt="Itens"
+                  width="20"
+                  style={{ marginRight: 8, verticalAlign: 'middle' }}
+                  />
+                } 
+                size="large" 
+                className="p-button-text"
+                onClick={handleOpenItensModal}
                 />
-              } 
-              size="large" 
-              className="p-button-text"
-              />
+                <Dialog header="Itens" visible={isItensModalOpen} style={{ width: '50vw' }} onHide={handleCloseItensModal}>
+                <h1>ITENS</h1>
+                <p>Lorem</p>
+                </Dialog>  
 
-              <Button 
-              label="Rolar Dados" 
-              icon={
-                <img
-                src={dados}
-                alt="Equipamentos"
-                width="20"
-                style={{ marginRight: 8, verticalAlign: 'middle' }}
+                <Button 
+                style={{color: 'black'}}
+                label="Mochila" 
+                icon={
+                  <img
+                  src={mochila}
+                  alt="Mochila"
+                  width="20"
+                  style={{ marginRight: 8, verticalAlign: 'middle' }}
+                  />
+                } 
+                size="large" 
+                className="p-button-text"
+                onClick={handleOpenMochilaModal}
                 />
-              } 
-              size="large" 
-              className="p-button-text"
-              />
+                <Dialog header="Mochila" visible={isMochilaModalOpen} style={{ width: '50vw' }} onHide={handleCloseMochilaModal}>
+                <h1>MOCHILA</h1>
+                <p>Lorem</p>
+                </Dialog>  
 
-            </div>
-            <div>
-              {/* <MolduraPersonagem imagem={max}/> */}
+                <Button 
+                label="Rolar Dados" size="large" className="p-button-text"
+                style={{color: 'black'}}
+                onClick={handleOpenRolarDadosModal}
+                icon={
+                  <img src={dados} alt="Rolar Dados" width="20" style={{ marginRight: 8, verticalAlign: 'middle' }}/>
+                } 
+                />
+
+
+                <Dialog header="Rolar Dados" visible={isRolarDadosModalOpen} style={{ width: '50vw' }} onHide={handleCloseRolarDadosModal}>
+                <h1>ROLAR DADOS</h1>
+                <p>Lorem</p>
+                </Dialog>  
             {/* <h1>Welcome to RPG Ficha</h1> */}
 
             </div>
