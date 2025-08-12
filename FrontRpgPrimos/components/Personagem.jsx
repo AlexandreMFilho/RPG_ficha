@@ -98,7 +98,7 @@ const cores = [
 
             </div>
 
-            <HeroisCarousel herois={herois} />
+            {/* <HeroisCarousel herois={herois} /> */}
 
             <div style={{
               display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',
@@ -106,6 +106,7 @@ const cores = [
               // border:'1px solid black',
                 maxHeight:'300px',
                 width:'100%',
+                paddingTop: '20px',
               }}>
                 <Button 
                 label="Equipamentos" 

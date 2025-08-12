@@ -106,7 +106,7 @@ const cores = [
                 maxHeight:'300px',
                 width:'100%',
               }}>
-                <Button 
+                {/* <Button 
                 label="Equipamentos" 
                 style={{color: 'black'}}
                 size="large" 
@@ -120,9 +120,9 @@ const cores = [
                 <Dialog header="Equipamentos" visible={isEquipModalOpen} style={{ width: '50vw' }} onHide={handleCloseEquipModal}>
                 <h1>EQUIPAMENTOS</h1>
                 <p>Lorem</p>
-                </Dialog>  
+                </Dialog>   */}
 
-                <Button 
+                {/* <Button 
                 label="Itens" 
                 style={{color: 'black'}}
                 icon={
@@ -140,7 +140,7 @@ const cores = [
                 <Dialog header="Itens" visible={isItensModalOpen} style={{ width: '50vw' }} onHide={handleCloseItensModal}>
                 <h1>ITENS</h1>
                 <p>Lorem</p>
-                </Dialog>  
+                </Dialog>   */}
 
                 <Button 
                 style={{color: 'black'}}
