@@ -22,7 +22,7 @@ const CartaMana = ({ imagem, valor: valorInicial, color }) => {
       <img
         src={`/imgs/${imagem}`}
         alt={`Mana ${imagem}`}
-        width="40"
+        width="30"
         onClick={() => setVisible(true)}
         style={{
           cursor: 'pointer'}}

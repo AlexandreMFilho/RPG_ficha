@@ -1,7 +1,7 @@
 import React from 'react';
 import CartaMana from './CartaMana';
 
-const MolduraPersonagem = ({ imagem }) => {
+const MolduraPersonagem = ({ imagem , valquiria}) => {
   return (
     <div style={{
       display: 'flex',
@@ -29,7 +29,8 @@ const MolduraPersonagem = ({ imagem }) => {
         <img src={`${imagem}`} alt="Imagem da Valquíria" style={{ width: '100%', borderRadius: '8px' }} />
       </div>
 
-      {/* Ícones de Mana */}
+      {valquiria && (
+
       <div style={{
         position: 'absolute',
         width: '100%',
@@ -46,7 +47,10 @@ const MolduraPersonagem = ({ imagem }) => {
         <CartaMana imagem="montain.jpg" valor={1} color="rgb(255, 45, 45)" />
         <CartaMana imagem="forest.jpg" valor={1} color="rgb(45, 255, 94)" />
         <CartaMana imagem="colorless.jpg" valor={1} color="rgba(255, 255, 255, 0.34)" />
+        
+        <CartaMana imagem="pena_3.jpg" valor={1} color="rgba(235, 113, 0, 1)" />
       </div>
+      )}
     </div>
   );
 };
