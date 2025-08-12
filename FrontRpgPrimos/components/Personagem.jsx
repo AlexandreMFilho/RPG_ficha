@@ -186,8 +186,8 @@ const cores = [
 
             <div>
                 <TabView>
-    <TabPanel header="Equipamentos" icon={
-                  <img src={dados} alt="Rolar Dados" width="20" style={{ marginRight: 8, verticalAlign: 'middle' }}/>
+    <TabPanel header="Equipamentos" leftIcon={
+                  <img src={equip} alt="Rolar Dados" width="20" style={{ marginRight: 8, verticalAlign: 'middle' }}/>
                 } 
                 >
         <p className="m-0">
@@ -197,7 +197,9 @@ const cores = [
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
     </TabPanel>
-    <TabPanel header="Habilidades">
+    <TabPanel header="Habilidades" leftIcon={
+                  <img src={dados} alt="Rolar Dados" width="20" style={{ marginRight: 8, verticalAlign: 'middle' }}/>
+                } >
         <p className="m-0">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
             eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
