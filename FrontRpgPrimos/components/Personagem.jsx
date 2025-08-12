@@ -5,6 +5,7 @@ import AtributosCard from "../components/AtributosCard";
 import AlinhamentoChart from "../components/AlinhamentoChart";
 import HeroisCarousel from "../components/HeroisCarousel";
 import mulherVerde from "../src/assets/imgs/mulher_verde.jpg";
+import InfoPersonagem from './InfoPersonagem';
 
 import magoazul from "../src/assets/imgs/mago_azul.jpeg";
 import cavaleiro from "../src/assets/imgs/cavaleiro_azul.jpeg";
@@ -90,7 +91,7 @@ const cores = [
                 <MolduraPersonagem imagem={magoazul} valquiria={false}/>
                 
                 {/* Atributos */}
-                <AtributosCard atributos={atributos} />
+                <InfoPersonagem atributos={atributos} />
 
                 {/* Alinhamento */}
                 {/* <AlinhamentoChart cores={cores} /> */}

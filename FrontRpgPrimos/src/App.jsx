@@ -9,6 +9,8 @@ import './App.css';
 import Ficha from '../components/Ficha';
 import Personagem from '../components/Personagem';
 
+// import "primereact/resources/themes/lara-light-indigo/theme.css";  // ou seu tema
+// import "primeflex/primeflex.css";
 
 
 function App() {
