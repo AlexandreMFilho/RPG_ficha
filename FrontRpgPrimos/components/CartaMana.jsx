@@ -72,9 +72,9 @@ const CartaMana = ({ imagem, valor: valorInicial, color }) => {
 
           {/* Botões de Aumentar/Diminuir */}
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-100px' , minWidth: '100%', gap: '15px', }}>
-            <Button icon="pi pi-plus" onClick={incrementar} className="p-button-success btn-green" severity="success"/>
-            <div style={{ fontSize: '36px', fontWeight: 'bold', color: color, WebkitTextStroke: '1px black', WebkitTextFillColor: color }}>{valor}</div>
             <Button icon="pi pi-minus" onClick={decrementar} className="p-button-danger" disabled={valor <= 0} severity="danger" />
+            <div style={{ fontSize: '36px', fontWeight: 'bold', color: color, WebkitTextStroke: '1px black', WebkitTextFillColor: color }}>{valor}</div>
+            <Button icon="pi pi-plus" onClick={incrementar} className="p-button-success btn-green" severity="success"/>
           </div>
         </div>
       </Dialog>
