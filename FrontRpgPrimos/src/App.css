@@ -1,3 +1,42 @@
+:root{
+  --primary-color: #014f6b;
+  --primary-color2: #01729b;
+  --primary-color3: #1d90b9;
+  --secondary-color: #ac4f03;
+  --secondary-color2: #e26804;
+  --secondary-color3: #f78120;
+
+  --primary-color-text: #ffffff;
+  --secondary-color-text: #000000;
+
+}
+
+body{
+  background-color: #00202c;
+  color: var(--primary-color-text);
+}
+
+.primary-color{
+  background-color: var(--primary-color);
+}
+.primary-color2{
+  background-color: var(--primary-color2);
+}
+.primary-color3{
+  background-color: var(--primary-color3);
+}
+.secondary-color{
+  background-color: var(--secondary-color);
+}
+.secondary-color2{
+  background-color: var(--secondary-color2);
+}
+.secondary-color3{
+  background-color: var(--secondary-color3);
+}
+
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -35,6 +74,8 @@
 
 .card {
   padding: 2em;
+  border: var(--secondary-color) solid 10px;
+  border-radius: 3%;
 }
 
 .read-the-docs {

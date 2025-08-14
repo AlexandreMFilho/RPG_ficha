@@ -23,13 +23,14 @@ const HeroisCarousel = ({ herois = [] }) => {
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
                 color: "black",
-                backgroundColor: "gray",
+                // backgroundColor: "gray",
                 width: '100%', // Ensure the parent takes up full width of its container
                 padding: '10px', // Add some padding for spacing
                 width: '100%',
             }}
+            className="card primary-color"
         >
-            <h4>Heróis</h4>
+            <h2>Heróis</h2>
             <div id="carousel" style={{ width: "100%", overflow: "hidden" }}>
                 <Carousel
                     value={herois}

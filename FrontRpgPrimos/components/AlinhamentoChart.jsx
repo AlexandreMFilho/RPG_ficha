@@ -72,6 +72,7 @@ const AlinhamentoChart = ({ cores = [] }) => {
         width: "300px",
         position: "relative",
         border: "2px solid #ccc",
+        backgroundColor: "rgba(255, 255, 255, 0.39)",
       }}
     >
       <div style={{ width: "100%", height: "250px" }}>

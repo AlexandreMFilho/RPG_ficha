@@ -66,16 +66,18 @@ const Ficha = () => {
     ];
     
     return (
-        <div className='card' style={{ 
+        <div className='card primary-color2' style={{ 
             display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-            height: '90vh' , width:'100vh', maxWidth:'100%', minWidth:'800px',  
-            backgroundColor:'gray',
+            height: '90vh' , width:'100vh', maxWidth:'100%', minWidth:'1000px',  
+            // backgroundColor:'gray',
         }}>
             <h1>MaxMillium Maximus</h1>
             <div style={{
                 display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',
-                backgroundColor:'gray',
+                // backgroundColor:'gray',
                 maxHeight:'300px',
+                gap: '20px',
+                
             }}>
                 <MolduraPersonagem imagem={max} valquiria={true}/>
                 
@@ -89,9 +91,11 @@ const Ficha = () => {
 
             <div style={{
                 display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',
-                backgroundColor:'gray',
+                // backgroundColor:'gray',
                 maxHeight:'300px',
                 width:'100%',
+                // paddingBottom: '50px',
+                // margin: '20px',
             }}>
                 {/* Outros botões e seus modais */}
                 <Button 
