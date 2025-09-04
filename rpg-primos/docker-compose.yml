@@ -7,8 +7,32 @@ services:
       - .:/var/www
     ports:
       - "8000:8000"
+    depends_on:
+      - db
+    # ADICIONADO: Garante que o container app use as variáveis do .env
+    env_file:
+      - .env
+    # ADICIONADO: Coloca o container na mesma rede do banco de dados
+    networks:
+      - rpg_primos_network
+
+  db:
+    image: postgres:15
+    container_name: rpg_primos_db
+    ports:
+      - "5432:5432"
     environment:
-      APP_ENV: local
-      APP_DEBUG: "true"
-      APP_KEY: base64:$(php artisan key:generate --show)
-    command: ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+      POSTGRES_DB: rpg_primos_db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - rpg_primos_network
+
+volumes:
+  postgres_data:
+
+networks:
+  rpg_primos_network:
+    driver: bridge

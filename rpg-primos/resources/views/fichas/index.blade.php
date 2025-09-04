@@ -23,7 +23,7 @@
         <div>
             @php
                 $atributos = [
-                    ['nomeAtributo' => 'Força', 'valorAtributo' => 1],
+                    ['nomeAtributo' => 'BANA', 'valorAtributo' => 1],
                     ['nomeAtributo' => 'Destreza', 'valorAtributo' => 1],
                     ['nomeAtributo' => 'Constituição', 'valorAtributo' => 1],
                     ['nomeAtributo' => 'Inteligência', 'valorAtributo' => 1],
