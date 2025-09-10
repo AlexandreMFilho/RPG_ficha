@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('valquirias', function (Blueprint $table) {
             $table->id(); // ID único da valquiria
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('criatura_id')->constrained('criaturas')->onDelete('cascade'); // Relacionamento com a tabela 'criaturas'
-            $table->foreignId('user_id')->constrained();
             $table->string('nome');
             $table->string('raca')->default('valquiria');
             $table->string('classe');
