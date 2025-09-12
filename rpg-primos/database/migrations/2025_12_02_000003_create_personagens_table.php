@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('personagens', function (Blueprint $table) {
+        Schema::create('personagem', function (Blueprint $table) {
             $table->id(); // ID único da valquiria
             $table->foreignId('criatura_id')->constrained('criaturas')->onDelete('cascade'); // Relacionamento com a tabela 'criaturas'
             $table->string('raca')->default('personagem');
@@ -39,6 +39,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('personagens');
+        Schema::dropIfExists('personagem');
     }
 };

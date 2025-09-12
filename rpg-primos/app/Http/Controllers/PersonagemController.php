@@ -58,4 +58,9 @@ class PersonagemController extends Controller
         $personagem->delete();
         return redirect()->route('personagens.index')->with('success', 'Personagem removido.');
     }
+
+    public function getPersonagem(Request $request)
+    {
+        return "retorno getPersonagem";
+    }
 }

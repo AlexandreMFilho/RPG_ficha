@@ -8,8 +8,7 @@ use App\Models\User;
 use App\Models\Fichas;
 use App\Models\Criatura;
 use App\Models\Valquiria;
-// Usei um alias para Personagens para facilitar a leitura no código (Personagem em vez de Personagens)
-use App\Models\Personagens as Personagem;
+use App\Models\Personagem;
 use App\Models\Monstro;
 
 class RPGSeeder extends Seeder
