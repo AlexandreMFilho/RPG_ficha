@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "0c825189-27c3-4408-8e67-1a866bff6639",
+		"name": "LOCAL RPGPRIMOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31238788",
+		"_collection_link": "https://sda777-1811.postman.co/workspace/SDA-Workspace~8964a086-6b00-42c4-9b67-ab37702bbbfb/collection/31238788-0c825189-27c3-4408-8e67-1a866bff6639?action=share&source=collection_link&creator=31238788"
+	},
+	"item": [
+		{
+			"name": "getPersonagem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/personagem",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"personagem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/oi",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"oi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
