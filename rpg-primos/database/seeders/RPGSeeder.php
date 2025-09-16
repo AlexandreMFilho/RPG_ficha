@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-use App\Models\Fichas;
+use App\Models\Ficha;
 use App\Models\Criatura;
 use App\Models\Valquiria;
 use App\Models\Personagem;
@@ -31,7 +31,7 @@ class RPGSeeder extends Seeder
         ]);
 
         // Cria uma ficha para o mestre, que será usada para associar os monstros.
-        $mestreFicha = Fichas::create([
+        $mestreFicha = Ficha::create([
             'user_id' => $mestre->id,
         ]);
 
@@ -47,13 +47,13 @@ class RPGSeeder extends Seeder
             ]);
 
             // Primeiro, cria a Ficha do jogador.
-            $fichaJogador = Fichas::create([
+            $fichaJogador = Ficha::create([
                 'user_id' => $jogador->id,
             ]);
 
             // Cria a Criatura base que será uma Valquíria, associada à Ficha do jogador.
             $criaturaValquiria = Criatura::create([
-                'fichas_id' => $fichaJogador->id,
+                'ficha_id' => $fichaJogador->id,
                 'name' => "Valquíria de {$jogador->name}",
                 'tipo' => 'valquiria',
             ]);
@@ -84,7 +84,7 @@ class RPGSeeder extends Seeder
             for ($j = 1; $j <= 3; $j++) {
                 // Cria a Criatura base que será um Personagem, também ligada à ficha do jogador.
                 $criaturaPersonagem = Criatura::create([
-                    'fichas_id' => $fichaJogador->id,
+                    'ficha_id' => $fichaJogador->id,
                     'name' => "Personagem {$j} (Servo da Valquíria de {$jogador->name})",
                     'tipo' => 'personagem',
                 ]);
@@ -125,7 +125,7 @@ class RPGSeeder extends Seeder
         // for ($k = 1; $k <= 4; $k++) {
         //     // Cria a Criatura base que será um Monstro.
         //     $criaturaMonstro = Criatura::create([
-        //         'fichas_id' => $mestreFicha->id, // CORREÇÃO: Adicionado o ID da ficha do mestre.
+        //         'ficha_id' => $mestreFicha->id, // CORREÇÃO: Adicionado o ID da ficha do mestre.
         //         'name' => "Goblin #{$k}",
         //         'tipo' => 'monstro',
         //     ]);

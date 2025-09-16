@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Personagem;
 use App\Models\Criatura;
 use Illuminate\Http\Request;
+use stdClass;
+use App\Services\RPGService;
 
 class PersonagemController extends Controller
 {
@@ -59,8 +61,5 @@ class PersonagemController extends Controller
         return redirect()->route('personagens.index')->with('success', 'Personagem removido.');
     }
 
-    public function getPersonagem(Request $request)
-    {
-        return "retorno getPersonagem";
-    }
+
 }

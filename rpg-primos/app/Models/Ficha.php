@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fichas extends Model
+class Ficha extends Model
 {
     use HasFactory;
+    protected $table = 'ficha';
 
     protected $fillable = [
-        // 'dados'
+        'user_id'
     ];
+
 
     // protected $casts = [
     //     'dados' => 'json',
