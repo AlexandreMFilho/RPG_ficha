@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import MolduraPersonagem from '../components/MolduraPersonagem';
-import max from '../imgs/max.jpg';
+import max from '../assets/imgs/max.jpg';
 import AtributosCard from "../components/AtributosCard";
 import AlinhamentoChart from "../components/AlinhamentoChart";
 import HeroisCarousel from "../components/HeroisCarousel";
-import magoazul from "../src/assets/imgs/mago_azul.jpeg";
-import cavaleiro from "../src/assets/imgs/cavaleiro_azul.jpeg";
-import mulherVerde from "../src/assets/imgs/mulher_verde.jpg";
-import tourobandido from "../src/assets/imgs/touro_bandido.jpeg";
-import cherife from "../src/assets/imgs/touro_cherife.jpeg";
-import vice from "../src/assets/imgs/touro_vice.jpeg";
-import mochila from "../public/game-icons/backpack.svg";
-import dados from "../public/game-icons/rolling-dices.svg";
+import magoazul from "../assets/imgs/mago_azul.jpeg";
+import cavaleiro from "../assets/imgs/cavaleiro_azul.jpeg";
+import mulherVerde from "../assets/imgs/mulher_verde.jpg";
+import tourobandido from "../assets/imgs/touro_bandido.jpeg";
+import cherife from "../assets/imgs/touro_cherife.jpeg";
+import vice from "../assets/imgs/touro_vice.jpeg";
+import mochila from "../../public/game-icons/backpack.svg";
+import dados from "../../public/game-icons/rolling-dices.svg";
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 

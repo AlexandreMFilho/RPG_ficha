@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import MolduraPersonagem from '../components/MolduraPersonagem';
-import max from '../imgs/max.jpg';
+import max from '../assets/imgs/max.jpg';
 import AtributosCard from "../components/AtributosCard";
 import AlinhamentoChart from "../components/AlinhamentoChart";
 import HeroisCarousel from "../components/HeroisCarousel";
-import mulherVerde from "../src/assets/imgs/mulher_verde.jpg";
+import mulherVerde from "../assets/imgs/mulher_verde.jpg";
 import InfoPersonagem from './InfoPersonagem';
 
-import magoazul from "../src/assets/imgs/mago_azul.jpeg";
-import cavaleiro from "../src/assets/imgs/cavaleiro_azul.jpeg";
-import tourobandido from "../src/assets/imgs/touro_bandido.jpeg";
-import cherife from "../src/assets/imgs/touro_cherife.jpeg";
-import vice from "../src/assets/imgs/touro_vice.jpeg";
+import magoazul from "../assets/imgs/mago_azul.jpeg";
+import cavaleiro from "../assets/imgs/cavaleiro_azul.jpeg";
+import tourobandido from "../assets/imgs/touro_bandido.jpeg";
+import cherife from "../assets/imgs/touro_cherife.jpeg";
+import vice from "../assets/imgs/touro_vice.jpeg";
 
-import equip from "../public/game-icons/abdominal-armor.svg";
-import mochila from "../public/game-icons/backpack.svg";
-import itens from "../public/game-icons/standing-potion.svg";
-import dados from "../public/game-icons/rolling-dices.svg";
+import equip from "../../public/game-icons/abdominal-armor.svg";
+import mochila from "../../public/game-icons/backpack.svg";
+import itens from "../../public/game-icons/standing-potion.svg";
+import dados from "../../public/game-icons/rolling-dices.svg";
 
 
 import { TabView, TabPanel } from 'primereact/tabview';
@@ -43,7 +43,7 @@ const handleOpenRolarDadosModal = () => setIsRolarDadosModalOpen(true);
 const handleCloseRolarDadosModal = () => setIsRolarDadosModalOpen(false);
 
   const herois = [
-    { img: mulherVerde, link: "#" },
+    // { img: mulherVerde, link: "#" },
     { img: magoazul, link: "#" },
     { img: cavaleiro, link: "#" },
     { img: tourobandido, link: "#" },

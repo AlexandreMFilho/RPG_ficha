@@ -10,11 +10,11 @@ import {
   Legend,
 } from "chart.js";
 
-import branca from "../src/assets/imgs/Branca.png";
-import azul from "../src/assets/imgs/Azul.png";
-import preta from "../src/assets/imgs/Preta.png";
-import vermelha from "../src/assets/imgs/Vermelha.png";
-import verde from "../src/assets/imgs/Verde.png";
+import branca from "../assets/imgs/Branca.png";
+import azul from "../assets/imgs/Azul.png";
+import preta from "../assets/imgs/Preta.png";
+import vermelha from "../assets/imgs/Vermelha.png";
+import verde from "../assets/imgs/Verde.png";
 
 ChartJS.register(
   RadialLinearScale,

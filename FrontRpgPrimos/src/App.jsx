@@ -6,8 +6,8 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../views/home';
 import './App.css';
-import Ficha from '../components/Ficha';
-import Personagem from '../components/Personagem';
+import Ficha from './components/Ficha';
+import Personagem from './components/Personagem';
 
 // import "primereact/resources/themes/lara-light-indigo/theme.css";  // ou seu tema
 // import "primeflex/primeflex.css";
